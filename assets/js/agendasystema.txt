@@ -1,0 +1,65 @@
+<div id="cadastrar" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Agendar</h4>
+            </div>
+            <div class="modal-body">
+
+
+
+                   
+
+                        <form class="form-horizontal"  action="<?php echo base_url();?>index.php/os/adicionar" method="post" id="formOs">
+
+
+                            <div class="form-group">
+                                <label for="cliente">Cliente<span class="required">*</span></label>
+
+                                <input id="cliente" class="form-control" type="text" name="cliente" value="" />
+                                <input id="clientes_id" class="form-control" type="hidden" name="clientes_id" value="" />
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="servico">Serviço<span class="required">*</span></label>
+
+                                <input id="servico" class="form-control" type="text" name="servico" value="" />
+                                <input id="idServico" class="form-control" type="hidden" name="idServico" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="tecnico">Profissional / Atendente<span class="required">*</span></label>
+
+                                <input id="tecnico" class="form-control" type="text" name="tecnico" value="" />
+                                <input id="usuarios_id" class="form-control" type="hidden" name="usuarios_id" value="" />
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-success" id="btnContinuar"><i class="icon-share-alt icon-white"></i> Continuar</button>
+                                <a href="<?php echo base_url() ?>index.php/os" class="btn"><i class="icon-arrow-left"></i> Voltar</a>
+                            </div>
+
+                        </form>
+
+                    
+
+                </div>
+            </div>
+
+
+
+
+</div>
+
+        </div>
+
+
+
+
+<link rel="stylesheet" href="<?php echo base_url();?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/jquery.validate.js"></script>
