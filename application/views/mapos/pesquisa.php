@@ -130,7 +130,7 @@
                 <span class="icon">
                     <i class="icon-wrench"></i>
                 </span>
-                <h5>Serviços</h5>
+                <h5>Serviços e Habilidades</h5>
 
             </div>
 
@@ -182,7 +182,7 @@
                 <span class="icon">
                     <i class="icon-tags"></i>
                 </span>
-                <h5>Ordens de Serviço</h5>
+                <h5>Agendamentos</h5>
 
             </div>
 
@@ -194,7 +194,7 @@
                         <tr style="backgroud-color: #2D335B">
                             <th>#</th>
                             <th>Data Inicial</th>
-                            <th>Defeito</th>
+                            <th></th>
                             <th></th>
                         </tr>
                     </thead>

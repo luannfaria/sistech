@@ -64,7 +64,7 @@ $(window).load(function() {
                                         </div>
                                         <div class="span6">
                                            
-                                            <input id="tecnico" class="span12" type="hidden" name="tecnico" value="<?php echo $result->nome ?>"  />
+                                            <input id="tecnico" class="span12" type="hidden" name="tecnico" value="<?php echo $result->nomefuncionario ?>"  />
                                             <input id="usuarios_id" class="span12" type="hidden" name="usuarios_id" value="<?php echo $result->usuarios_id ?>"  />
                                         </div>
                                     </div>
@@ -119,10 +119,10 @@ $(window).load(function() {
                                     </div>
                                     <div class="span2">
                                         <label for="">Quantidade</label>
-                                        <input type="text" placeholder="Quantidade" id="quantidade" name="quantidade" class="span12" />
+                                        <input type="number"  id="quantidade" name="quantidade" class="span12" />
                                     </div>
                                     <div class="span2">
-                                        <label for="">.</label>
+                                        <label for=""></label>
                                         <button class="btn btn-success span12" id="btnAdicionarProduto"><i class="icon-white icon-plus"></i> Adicionar</button>
                                     </div>
                                 </form>
@@ -163,7 +163,7 @@ $(window).load(function() {
 
                         <!--Serviços-->
                         <div class="tab-pane active" id="tab3">
-                            <div class="span12" style="padding: 1%; margin-left: 0">
+                            <div class="span12 well" style="padding: 1%; margin-left: 0">
                               
                                     <form id="formServicos" action="<?php echo base_url() ?>index.php/os/adicionarServico" method="post">
                                     <div class="span4">
@@ -173,7 +173,7 @@ $(window).load(function() {
                                         <label for="">Serviço</label>
                                         <input type="text" class="span12" name="servico" id="servico" placeholder="Digite o nome do serviço" />
                                     </div>
-            <div class="span4">
+            <div class="span3">
                 <label for="">Hora</label>
                                       
                                         <input id="hora" class="span12" name="hora" type="time"  value="<?php echo $result->hora ?>"/>
@@ -181,13 +181,13 @@ $(window).load(function() {
 
                                         </div>
                  
-                                        <div class="span4">
+                                        <div class="span3">
                                         
    
                                         <label for="usuarios">Profissional</label>
                                       <select id="usuarios" class="span12" name="usuarios" value="">
-                                        <?php foreach($usuarios as $linha): ?>
-                                          <option value="<?php echo $linha->idUsuarios?>"> <?php echo $linha->nome?></option>
+                                        <?php foreach($funcionarios as $linha): ?>
+                                          <option value="<?php echo $linha->idfuncionarios?>"> <?php echo $linha->nomefuncionario?></option>
                                          
                                           <?php endforeach; ?>
                                          

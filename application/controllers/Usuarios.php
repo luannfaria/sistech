@@ -85,18 +85,11 @@ class Usuarios extends CI_Controller {
 
             $data = array(
                     'nome' => set_value('nome'),
-					'rg' => set_value('rg'),
-					'cpf' => set_value('cpf'),
-					'rua' => set_value('rua'),
-					'numero' => set_value('numero'),
-					'bairro' => set_value('bairro'),
-					'cidade' => set_value('cidade'),
-					'estado' => set_value('estado'),
+					
 					'login' => set_value('login'),
 					'senha' => $this->encryption->encrypt($this->input->post('senha')),
-					'telefone' => set_value('telefone'),
-					'celular' => set_value('celular'),
-                    'cor'=>set_value('cor'),
+					
+                   
 					'situacao' => set_value('situacao'),
                     'permissoes_id' => $this->input->post('permissoes_id'),
 					'dataCadastro' => date('Y-m-d')
@@ -133,15 +126,10 @@ class Usuarios extends CI_Controller {
 		$this->data['custom_error'] = '';
         $this->form_validation->set_rules('nome', 'Nome', 'trim|required');
 
-        $this->form_validation->set_rules('rua', 'Rua', 'trim|required');
-        $this->form_validation->set_rules('numero', 'Número', 'trim|required');
-        $this->form_validation->set_rules('bairro', 'Bairro', 'trim|required');
-        $this->form_validation->set_rules('cidade', 'Cidade', 'trim|required');
-        $this->form_validation->set_rules('estado', 'Estado', 'trim|required');
         $this->form_validation->set_rules('login', 'login', 'trim|required');
-        $this->form_validation->set_rules('telefone', 'Telefone', 'trim|required');
+      
         $this->form_validation->set_rules('situacao', 'Situação', 'trim|required');
-        $this->form_validation->set_rules('permissoes_id', 'Permissão', 'trim|required');
+      
 
         if ($this->form_validation->run() == false)
         {
@@ -166,18 +154,11 @@ class Usuarios extends CI_Controller {
 
                 $data = array(
                         'nome' => $this->input->post('nome'),
-                        'rg' => $this->input->post('rg'),
-                        'cpf' => $this->input->post('cpf'),
-                        'rua' => $this->input->post('rua'),
-                        'numero' => $this->input->post('numero'),
-                        'bairro' => $this->input->post('bairro'),
-                        'cidade' => $this->input->post('cidade'),
-                        'estado' => $this->input->post('estado'),
+                       
                         'login' => $this->input->post('login'),
                         'cor'=>$this->input->post('cor'),    
                         'senha' => $senha,
-                        'telefone' => $this->input->post('telefone'),
-                        'celular' => $this->input->post('celular'),
+                      
                         'situacao' => $this->input->post('situacao'),
                         'permissoes_id' => $this->input->post('permissoes_id')
                 );
@@ -187,17 +168,9 @@ class Usuarios extends CI_Controller {
 
                 $data = array(
                         'nome' => $this->input->post('nome'),
-                        'rg' => $this->input->post('rg'),
-                        'cpf' => $this->input->post('cpf'),
-                        'rua' => $this->input->post('rua'),
-                        'numero' => $this->input->post('numero'),
-                        'bairro' => $this->input->post('bairro'),
-                        'cidade' => $this->input->post('cidade'),
-                        'estado' => $this->input->post('estado'),
+                       
                         'login' => $this->input->post('login'),
-                    'cor'=>$this->input->post('cor'),
-                        'telefone' => $this->input->post('telefone'),
-                        'celular' => $this->input->post('celular'),
+                    
                         'situacao' => $this->input->post('situacao'),
                         'permissoes_id' => $this->input->post('permissoes_id')
                 );

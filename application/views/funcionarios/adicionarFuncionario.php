@@ -1,5 +1,3 @@
-
-
 <div class="row-fluid" style="margin-top:0">
     <div class="span12">
         <div class="widget-box">
@@ -13,108 +11,129 @@
                 <?php if ($custom_error != '') {
                     echo '<div class="alert alert-danger">'.$custom_error.'</div>';
                 } ?>
-                <form action="<?php echo current_url(); ?>" id="formFuncionario" method="post" class="form-horizontal" >
-                    <div class="control-group">
-                        <label for="nomecompleto" class="control-label">Nome completo<span class="required" style="text-transform:uppercase">*</span></label>
-                        <div class="controls">
-                            <input id="nomecompleto" type="text" name="nomecompleto" value="<?php echo set_value('nomecompleto'); ?>"  />
+                <form action="<?php echo current_url(); ?>" id="formFuncionario" method="post" class="form-horizontal">
+
+                    <div class="span12" style="padding: 3%">
+                        <div class="span7">
+                            <label for="nomefuncionario">Nome ou apelido<span class="required" style="text-transform:uppercase">*</span>
+                        
+                            <input id="nomefuncionario" type="text" class="span8" name="nomefuncionario" value="<?php echo set_value('nomefuncionario'); ?>"  /></label>
+
                         </div>
+                        
+                        <div class="span5">
+                            <label for="admissao">Admissão
+                        
+                            <input id="admissao" type="date" class="span7" name="admissao" value="<?php echo set_value('admissao'); ?>"  /></label>
+
+                        </div>
+
                     </div>
-                      <div class="control-group">
-                        <label for="nome" class="control-label">Nome ou apelido<span class="required" style="text-transform:uppercase">*</span></label>
-                        <div class="controls">
-                            <input id="nome" type="text" name="nome" value="<?php echo set_value('nome'); ?>"  />
+
+                    <div class="span12" style="padding: 1%">
+                        <div class="span12">
+                            <label for="nome">Nome completo<span class="required" style="text-transform:uppercase">*</span>
+                        
+                            <input id="nomecompleto" type="text" class="span7" name="nomecompleto" value="<?php echo set_value('nomecompleto'); ?>"  /></label>
                         </div>
                     </div>
 
-                    <div class="control-group">
-                        <label for="admissao" class="control-label">Data admissão<span class="required" style="text-transform:uppercase">*</span></label>
-                        <div class="controls">
-                            <input id="admissao" type="text" name="admissao" value="<?php echo set_value('admissao'); ?>"  />
-                        </div>
-                    </div>
 
-                    <div class="control-group">
-                        <label for="rg" class="control-label">RG<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="rg" type="text" name="rg" value="<?php echo set_value('rg'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="cpf" class="control-label">CPF<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="cpf" type="text" name="cpf" value="<?php echo set_value('cpf'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="rua" class="control-label">Rua<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="numero" class="control-label">Numero<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="bairro" class="control-label">Bairro<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="bairro" type="text" name="bairro" value="<?php echo set_value('bairro'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="cidade" class="control-label">Cidade<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="cidade" type="text" name="cidade" value="<?php echo set_value('cidade'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="estado" class="control-label">Estado<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="estado" type="text" name="estado" value="<?php echo set_value('estado'); ?>"  />
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label for="telefone" class="control-label">Telefone<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="telefone" type="text"  maxlength="15" name="telefone" value="<?php echo set_value('telefone'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="celular" class="control-label">Celular</label>
-                        <div class="controls">
-                            <input id="celular" type="text" name="celular" value="<?php echo set_value('celular'); ?>"  />
-
+                    <div class="span12" style="padding: 2%">
+                        <div class="span4">
+                            <label for="rg">RG<span class="required">*</span>
+                      
+                            <input id="rg" type="text" class="span8" name="rg" value="<?php echo set_value('rg'); ?>"  /></label>
 
                         </div>
+
+                        <div class="span4">
+                            <label for="cpf">CPF<span class="required">*</span>
+                            
+                                <input id="cpf" class="span8" type="text" name="cpf" value="<?php echo set_value('cpf'); ?>" /></label>
+
+                        </div>
+
+                        <div class="span4">
+                            <label for="cor">Cor da Agenda
+                           
+                                <input id="cor" type="color" class="span6" name="cor" value="<?php echo set_value('cor'); ?>"></label>
+
+                        </div>
+
                     </div>
 
-                    <div class="control-group">
-                        <label for="cor" class="control-label">Cor da Agenda</label>
-                        <div class="controls">
-                        <input id="cor" type="color" name="cor" value="<?php echo set_value('cor'); ?>">
+
+                    <div class="span12" style="padding: 2%">
+                        <div class="span6">
+                            <label for="rua">Rua<span class="required">*</span>
+                        
+                            <input id="rua" type="text" class="span10" name="rua" value="<?php echo set_value('rua'); ?>" /></label>
+
                         </div>
+
+                        <div class="span3">
+                            <label for="numero">Numero<span class="required">*</span>
+                      
+                            <input id="numero" type="text" class="span4" name="numero" value="<?php echo set_value('numero'); ?>" /></label>
+
+                        </div>
+
                     </div>
-                    <div class="control-group">
-                        <label  class="control-label">Situação*</label>
-                        <div class="controls">
+                    <div class="span12" style="padding: 2%">
+                        <div class="span4">
+                            <label for="bairro">Bairro<span class="required">*</span>
+                       
+                            <input id="bairro" type="text" class="span9" name="bairro" value="<?php echo set_value('bairro'); ?>" /></label>
+
+                        </div>
+
+                        <div class="span4">
+                            <label for="cidade">Cidade<span class="required">*</span>
+                       
+                            <input id="cidade" type="text" class="span9" name="cidade" value="<?php echo set_value('cidade'); ?>" /></label>
+
+                        </div>
+
+                        <div class="span3">
+                            <label for="estado">Estado<span class="required">*</span>
+                        
+                            <input id="estado" type="text" class="span7" name="estado" value="<?php echo set_value('estado'); ?>" /></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="span12" style="padding: 2%">
+                        <div class="span4">
+                            <label for="telefone" >Telefone<span class="required">*</span>
+
+                            <input id="telefone" type="text" maxlength="15" name="telefone" value="<?php echo set_value('telefone'); ?>" /></label>
+
+                        </div>
+
+                        <div class="span4">
+                            <label for="celular" >Celular
+
+                            <input id="celular" type="text" name="celular" value="<?php echo set_value('celular'); ?>" /></label>
+
+
+
+                        </div>
+
+
+                        <div class="span4">
+                            <label>Situação*
+
                             <select name="situacao" id="situacao">
                                 <option value="1">Ativo</option>
                                 <option value="0">Inativo</option>
-                            </select>
-                        </div>
-                    </div>
+                            </select></label>
 
-                  
+                        </div>
+
+                    </div>
 
                     <div class="form-actions">
                         <div class="span12">
@@ -134,50 +153,40 @@
 
 
 
-<script  src="<?php echo base_url()?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url()?>assets/js/jquery.validate.js"></script>
 <script type="text/javascript">
-      $(document).ready(function(){
+    $(document).ready(function() {
 
-           $('#formUsuario').validate({
-            rules : {
-                  nome:{ required: true},
-        
-                  telefone:{ required: true},
-                 
-                  rua:{ required: true},
-                  numero:{ required: true},
-                  bairro:{ required: true},
-                  cidade:{ required: true},
-                  estado:{ required: true},
-                  cep:{ required: true}
+        $('#formFuncionario').validate({
+            rules: {
+                nomecompleto: {
+                    required: true
+                }
+
+
             },
             messages: {
-                  nome :{ required: 'Campo Requerido.'},
-                
-                  telefone:{ required: 'Campo Requerido.'},
-                 
-                  rua:{ required: 'Campo Requerido.'},
-                  numero:{ required: 'Campo Requerido.'},
-                  bairro:{ required: 'Campo Requerido.'},
-                  cidade:{ required: 'Campo Requerido.'},
-                  estado:{ required: 'Campo Requerido.'},
-                  cep:{ required: 'Campo Requerido.'}
+                nomecompleto: {
+                    required: 'Campo Requerido.'
+                }
+
 
             },
 
             errorClass: "help-inline",
             errorElement: "span",
-            highlight:function(element, errorClass, validClass) {
+            highlight: function(element, errorClass, validClass) {
                 $(element).parents('.control-group').addClass('error');
             },
             unhighlight: function(element, errorClass, validClass) {
                 $(element).parents('.control-group').removeClass('error');
                 $(element).parents('.control-group').addClass('success');
             }
-           });
+        });
 
 
 
 
-      });
+    });
+
 </script>

@@ -126,7 +126,7 @@ if(!$results){?>
             echo '<tr>';
             echo '<td>'.$r->idOs.'</td>';
             echo '<td>'.$r->nomeCliente.'</td>';
-            echo '<td>'.$r->nome.'</td>';
+            echo '<td>'.$r->nomefuncionario.'</td>';
             echo '<td>'.$dataInicial.'</td>';
             echo '<td>'.$r->hora.'</td>';
             echo '<td><span class="badge" style="background-color: '.$cor.'; border-color: '.$cor.'">'.$r->status.'</span> </td>';
@@ -163,7 +163,7 @@ if(!$results){?>
   <form action="<?php echo base_url() ?>index.php/os/excluir" method="post" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h5 id="myModalLabel">Excluir Agendamenyo</h5>
+    <h5 id="myModalLabel">Excluir Agendamento</h5>
   </div>
   <div class="modal-body">
     <input type="hidden" id="idOs" name="id" value="" />

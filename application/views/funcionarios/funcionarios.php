@@ -18,10 +18,11 @@ if(!$results){?>
         <tr style="backgroud-color: #2D335B">
          <th>Codigo</th>
             <th>Nome</th>
-            <th>Data admissão</th>
+            
             <th>Telefone</th>
-            <th>Nível</th>
-            <th></th>
+            
+            <th>Data admissão</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tbody>    
@@ -53,23 +54,25 @@ if(!$results){?>
         <tr style="backgroud-color: #2D335B">
             <th>Codigo</th>
             <th>Nome</th>
-            <th>Data admissão</th>
+            
             <th>Telefone</th>
-            <th>Nível</th>
-            <th></th>
+            
+            <th>Data admissão</th>
+           <th></th>
+            
         </tr>
     </thead>
     <tbody>
         <?php foreach ($results as $r) {
            
             echo '<tr>';
-            echo '<td>'.$r->idUsuarios.'</td>';
-            echo '<td>'.$r->nome.'</td>';
-            echo '<td>'.$r->cpf.'</td>';
+            echo '<td>'.$r->idfuncionarios.'</td>';
+            echo '<td>'.$r->nomecompleto.'</td>';
             echo '<td>'.$r->telefone.'</td>';
-            echo '<td>'.$r->permissao.'</td>';
+            echo '<td>'.$r->dataadmissao.'</td>';
+           
             echo '<td>
-                      <a href="'.base_url().'index.php/funcionarios/editar/'.$r->idUsuarios.'" class="btn btn-info tip-top" title="Editar Usuário"><i class="icon-pencil icon-white"></i></a>
+                      <a href="'.base_url().'index.php/funcionarios/editar/'.$r->idfuncionarios.'" class="btn btn-info tip-top" title="Editar Usuário"><i class="icon-pencil icon-white"></i></a>
                   </td>';
             echo '</tr>';
         }?>

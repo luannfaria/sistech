@@ -187,9 +187,9 @@ $this->load->library('form_validation');
         $obj =NULL;
          foreach ($event as $i) {
     $obj[] = [
-        'id' => $i['idUsuarios'],
-        'title' => $i['nome'],
-        'eventColor'=> $i['cor']
+        'id' => $i['idfuncionarios'],
+        'title' => $i['nomefuncionario'],
+        'eventColor'=> $i['coragenda']
 
 
     ];
@@ -327,7 +327,7 @@ $this->load->view('editarOs', $variaveis);
             }
         }
      
-        $this->data['usuarios'] = $this->os_model->getLista();
+        $this->data['funcionarios'] = $this->os_model->getLista();
         $this->data['result'] = $this->os_model->getById($this->uri->segment(3));
         $this->data['produtos'] = $this->os_model->getProdutos($this->uri->segment(3));
         $this->data['servicos'] = $this->os_model->getServicos($this->uri->segment(3));
@@ -441,6 +441,14 @@ $this->load->view('editarOs', $variaveis);
         if (isset($_GET['term'])){
             $q = strtolower($_GET['term']);
             $this->os_model->autoCompleteCliente($q);
+        }
+
+    }
+     public function autoCompleteFuncionario(){
+
+        if (isset($_GET['term'])){
+            $q = strtolower($_GET['term']);
+            $this->os_model->autoCompleteFuncionario($q);
         }
 
     }

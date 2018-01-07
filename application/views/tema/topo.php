@@ -125,12 +125,17 @@
             <li class="submenu <?php if(isset($menuConfiguracoes)){echo 'active open';};?>">
                 <a href="#"><i class="icon icon-cog"></i> <span>Configurações</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
                 <ul>
+                    
+                    <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cFuncionario')){ ?>
+                    <li><a href="<?php echo base_url()?>index.php/funcionarios">Profissionais</a></li>
+                    <?php } ?>
+                    
                     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cUsuario')){ ?>
-                    <li><a href="<?php echo base_url()?>index.php/usuarios">Profissionais</a></li>
+                    <li><a href="<?php echo base_url()?>index.php/usuarios">Usuários do sistema</a></li>
                     <?php } ?>
                     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cEmitente')){ ?>
                       
-                    <li><a href="<?php echo base_url()?>index.php/mapos/emitente">Emitente</a></li>
+                    <li><a href="<?php echo base_url()?>index.php/mapos/emitente">Empresa</a></li>
                     
                     <?php } ?>
                     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cPermissao')){ ?>

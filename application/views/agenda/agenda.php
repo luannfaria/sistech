@@ -244,7 +244,7 @@
 
 
         $("#tecnico").autocomplete({
-            source: "<?php echo base_url(); ?>index.php/os/autoCompleteUsuario",
+            source: "<?php echo base_url(); ?>index.php/os/autoCompleteFuncionario",
             minLength: 1,
             select: function(event, ui) {
 

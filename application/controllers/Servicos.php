@@ -201,7 +201,7 @@ $this->load->view('adicionarServico', $variaveis);
         }
 
         $this->data['result'] = $this->servicos_model->getById($this->uri->segment(3));
-$this->data['categoria'] = $this->servicos_model->getLista();
+        $this->data['categoria'] = $this->servicos_model->getLista();
         $this->data['view'] = 'servicos/editarServico';
         $this->load->view('tema/topo', $this->data);
 

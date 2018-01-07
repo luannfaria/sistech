@@ -326,6 +326,12 @@
                                             <span class="lbl"> Configurar Usuário</span>
                                         </label>
                                     </td>
+                                    <td>
+                                        <label>
+                                            <input name="cFuncionario" class="marcar" type="checkbox" value="1" />
+                                            <span class="lbl"> Configurar Funcionario</span>
+                                        </label>
+                                    </td>
 
                                     <td>
                                         <label>

@@ -120,6 +120,8 @@ class Permissoes extends CI_Controller {
                   'dLancamento' => $this->input->post('dLancamento'),
                   'vLancamento' => $this->input->post('vLancamento'),
 
+                
+                  'cFuncionario' => $this->input->post('cFuncionario'),
                   'cUsuario' => $this->input->post('cUsuario'),
                   'cEmitente' => $this->input->post('cEmitente'),
                   'cPermissao' => $this->input->post('cPermissao'),
@@ -209,7 +211,8 @@ class Permissoes extends CI_Controller {
                   'dLancamento' => $this->input->post('dLancamento'),
                   'vLancamento' => $this->input->post('vLancamento'),
 
-                  'cUsuario' => $this->input->post('cUsuario'),
+                'cFuncionario' => $this->input->post('cFuncionario'),  
+                'cUsuario' => $this->input->post('cUsuario'),
                   'cEmitente' => $this->input->post('cEmitente'),
                   'cPermissao' => $this->input->post('cPermissao'),
                   'cBackup' => $this->input->post('cBackup'),

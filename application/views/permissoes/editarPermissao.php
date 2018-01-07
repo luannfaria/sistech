@@ -328,7 +328,13 @@
                                             <span class="lbl"> Relatório Financeiro</span>
                                         </label>
                                     </td>
-                                    <td colspan="2"></td>
+                                    <td>
+                                        <label>
+                                            <input <?php if(isset($permissoes['cBackup'])){ if($permissoes['cBackup'] == '1'){echo 'checked';}}?> name="cBackup" class="marcar" type="checkbox" value="1" />
+                                            <span class="lbl"> Backup</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="1"></td>
 
                                 </tr>
                                 <tr><td colspan="4"></td></tr>
@@ -339,6 +345,13 @@
                                         <label>
                                             <input <?php if(isset($permissoes['cUsuario'])){ if($permissoes['cUsuario'] == '1'){echo 'checked';}}?> name="cUsuario" class="marcar" type="checkbox" value="1" />
                                             <span class="lbl"> Configurar Usuário</span>
+                                        </label>
+                                    </td>
+                                    
+                                    <td>
+                                        <label>
+                                            <input <?php if(isset($permissoes['cFuncionario'])){ if($permissoes['cFuncionario'] == '1'){echo 'checked';}}?> name="cFuncionario" class="marcar" type="checkbox" value="1" />
+                                            <span class="lbl"> Configurar Funcionario</span>
                                         </label>
                                     </td>
 
@@ -356,13 +369,9 @@
                                         </label>
                                     </td>
 
-                                    <td>
-                                        <label>
-                                            <input <?php if(isset($permissoes['cBackup'])){ if($permissoes['cBackup'] == '1'){echo 'checked';}}?> name="cBackup" class="marcar" type="checkbox" value="1" />
-                                            <span class="lbl"> Backup</span>
-                                        </label>
-                                    </td>
+                                    
                                 <tr><td colspan="4"></td></tr>
+                                
                                     <td>
                                         <label>
                                             <input <?php if(isset($permissoes['vAgenda'])){ if($permissoes['vAgenda'] == '1'){echo 'checked';}}?> name="vAgenda" class="marcar" type="checkbox" value="1" />

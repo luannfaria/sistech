@@ -23,8 +23,12 @@
                         
                              <div class="span4">
                                    <label for="categoria">Categoria</label>
-                                      <select id="categoria" class="span12" name="categoria" value="<?php echo $result->categoria ?>">
+                                      <select id="categoria" class="span12" name="categoria" value="">
+                                          
+                                         
                                         <?php foreach($categoria as $linha): ?>
+                                          
+                                           if($linha->nomecategoria == $result->categoria){ $selected = 'selected';}else{$selected = '';}
                                           <option value="<?php echo $linha->nomecategoria?>"> <?php echo $linha->nomecategoria?></option>
                                          
                                           <?php endforeach; ?>

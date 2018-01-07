@@ -79,31 +79,7 @@ $config = array('clientes' => array(array(
                                     'rules'=>'required|trim'
                                 ),
 
-                                array(
-                                    'field'=>'rua',
-                                    'label'=>'Rua',
-                                    'rules'=>'required|trim'
-                                ),
-                                array(
-                                    'field'=>'numero',
-                                    'label'=>'Numero',
-                                    'rules'=>'required|trim'
-                                ),
-                                array(
-                                    'field'=>'bairro',
-                                    'label'=>'Bairro',
-                                    'rules'=>'required|trim'
-                                ),
-                                array(
-                                    'field'=>'cidade',
-                                    'label'=>'Cidade',
-                                    'rules'=>'required|trim'
-                                ),
-                                array(
-                                    'field'=>'estado',
-                                    'label'=>'Estado',
-                                    'rules'=>'required|trim'
-                                ),
+                                
                                 array(
                                     'field'=>'login',
                                     'label'=>'login',
@@ -114,14 +90,16 @@ $config = array('clientes' => array(array(
                                     'label'=>'senha',
                                     'rules'=>'required|trim'
                                 ),
-                                array(
-                                    'field'=>'telefone',
-                                    'label'=>'Telefone',
-                                    'rules'=>'required|trim'
-                                ),
+                               
                                 array(
                                     'field'=>'situacao',
                                     'label'=>'Situacao',
+                                    'rules'=>'required|trim'
+                                ))
+                ,
+                 'funcionarios' => array(array(
+                                    'field'=>'nomecompleto',
+                                    'label'=>'Nomecompleto',
                                     'rules'=>'required|trim'
                                 ))
                 ,
